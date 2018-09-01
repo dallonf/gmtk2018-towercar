@@ -5,7 +5,7 @@ using UnityEngine;
 public class CarDrive : MonoBehaviour
 {
 	public float Speed;
-	public Collider collider;
+	public new Collider collider;
 
 	private bool crashed = false;
 

@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\CarDrive.cs" />
+     <Compile Include="Assets\CarSimulation.cs" />
      <Compile Include="Assets\Scripts\Utils\VectorExtensions.cs" />
      <Compile Include="Assets\Tower.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
