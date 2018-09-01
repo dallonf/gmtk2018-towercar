@@ -29,19 +29,26 @@ public class CarSimulation : MonoBehaviour
 			positions.Add(currentPosition + offset);
 			for (int i = 0; i < 1000; i++)
 			{
-				foreach (var tower in allTowers)
+				// Take several steps before recording the point
+				for (int i2 = 0; i2 < 5; i2++)
 				{
-					if (tower.IsCarAffected(currentPosition))
+					foreach (var tower in allTowers)
 					{
-						forward = Quaternion.AngleAxis(tower.TurnEffect * timestep, Vector3.up) * forward;
+						if (tower.IsCarAffected(currentPosition))
+						{
+							forward = Quaternion.AngleAxis(tower.TurnEffect * timestep, Vector3.up) * forward;
+						}
 					}
+					currentPosition += forward * car.Speed * timestep;
 				}
-				currentPosition += forward * car.Speed * timestep;
+
 				positions.Add(currentPosition + offset);
-				if (Physics.CheckSphere(currentPosition, CarRadius, LayerMask.GetMask("Default"), QueryTriggerInteraction.Ignore))
-				{
-					break;
-				}
+				// The commented code below will stop the line if it collides with an obstacle...
+				// but I'm interested in trying the game without it for awhile
+				// if (Physics.CheckSphere(currentPosition, CarRadius, LayerMask.GetMask("Default"), QueryTriggerInteraction.Ignore))
+				// {
+				// 	break;
+				// }
 			}
 			lineRenderer.positionCount = positions.Count;
 			lineRenderer.SetPositions(positions.ToArray());

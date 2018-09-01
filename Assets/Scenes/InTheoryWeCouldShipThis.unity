@@ -2637,6 +2637,22 @@ CapsuleCollider:
   m_Height: 6.16
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1444529711 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1346069640138326, guid: 207bddf967c0d61469c6ccb85f5ac520,
+    type: 2}
+  m_PrefabInternal: {fileID: 1927507219}
+--- !u!114 &1444529712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1444529711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda595438625ae24296b36c472f397bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1467138342
 Prefab:
   m_ObjectHideFlags: 0
@@ -3292,6 +3308,11 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114225046715787922, guid: 207bddf967c0d61469c6ccb85f5ac520,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4211115104544758, guid: 207bddf967c0d61469c6ccb85f5ac520, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3338,10 +3359,6 @@ Prefab:
         type: 2}
       propertyPath: ParTime
       value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1250229861959574, guid: 207bddf967c0d61469c6ccb85f5ac520, type: 2}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1848479609394474, guid: 207bddf967c0d61469c6ccb85f5ac520, type: 2}
       propertyPath: m_Name
@@ -3418,6 +3435,40 @@ Prefab:
       value: Quit
       objectReference: {fileID: 0}
     - target: {fileID: 114754032577916134, guid: 207bddf967c0d61469c6ccb85f5ac520,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346069640138326, guid: 207bddf967c0d61469c6ccb85f5ac520, type: 2}
+      propertyPath: m_Name
+      value: ExitGameButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 114967008328446784, guid: 207bddf967c0d61469c6ccb85f5ac520,
+        type: 2}
+      propertyPath: m_Text
+      value: Exit Game
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225046715787922, guid: 207bddf967c0d61469c6ccb85f5ac520,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225046715787922, guid: 207bddf967c0d61469c6ccb85f5ac520,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225046715787922, guid: 207bddf967c0d61469c6ccb85f5ac520,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1444529712}
+    - target: {fileID: 114225046715787922, guid: 207bddf967c0d61469c6ccb85f5ac520,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Quit
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225046715787922, guid: 207bddf967c0d61469c6ccb85f5ac520,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
