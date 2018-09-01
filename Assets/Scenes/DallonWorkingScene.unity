@@ -512,6 +512,7 @@ GameObject:
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
   - component: {fileID: 534669906}
+  - component: {fileID: 534669907}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: Untagged
@@ -594,6 +595,17 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 513
   m_MaxRayIntersections: 0
+--- !u!114 &534669907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 815ebef475358a647be6870eb71c80d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &575049575
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,6 +712,10 @@ MonoBehaviour:
   CurrentBuildState:
     CurrentMode: 0
     HighlightedTower: {fileID: 0}
+  ClockwiseTowerPrefab: {fileID: 1850112978404484, guid: 74bfa4c5c8f2c7f449be16b400bfeac9,
+    type: 2}
+  CounterClockwiseTowerPrefab: {fileID: 1921351412123868, guid: 396e0a13b8c9d18459a3f344904c9f60,
+    type: 2}
   Cars:
   - {fileID: 2034016053}
 --- !u!4 &729125015

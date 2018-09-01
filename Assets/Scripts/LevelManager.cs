@@ -35,6 +35,8 @@ public class LevelManager : MonoBehaviour
 
 	public LevelMode CurrentLevelMode;
 	public BuildState CurrentBuildState;
+	public GameObject ClockwiseTowerPrefab;
+	public GameObject CounterClockwiseTowerPrefab;
 	public Transform[] Cars;
 	private InitialCarPosition[] InitialCarPositions;
 
@@ -111,6 +113,25 @@ public class LevelManager : MonoBehaviour
 	public void UnhighlightTower()
 	{
 		CurrentBuildState.HighlightedTower = null;
+	}
+
+	public void AddTower(TowerType towerType, Vector3 position)
+	{
+		GameObject prefab;
+		if (towerType == TowerType.CLOCKWISE)
+		{
+			prefab = ClockwiseTowerPrefab;
+		}
+		else if (towerType == TowerType.COUNTER_CLOCKWISE)
+		{
+			prefab = CounterClockwiseTowerPrefab;
+		}
+		else
+		{
+			throw new ArgumentException("Unrecognized tower type: " + towerType.ToString(), "towerType");
+		}
+
+		GameObject.Instantiate(prefab, position.Flatten(), Quaternion.identity);
 	}
 
 }
