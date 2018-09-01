@@ -6,11 +6,23 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-	public enum LevelState
+	public enum LevelMode
 	{
 		BUILD,
 		PLAY,
 		WIN
+	}
+
+	public struct BuildState
+	{
+		public BuildMode CurrentMode;
+	}
+
+	public enum BuildMode
+	{
+		DELETE,
+		ADD_CLOCKWISE_TOWER,
+		ADD_COUNTER_CLOCKWISE_TOWER
 	}
 
 	struct InitialCarPosition
@@ -19,7 +31,8 @@ public class LevelManager : MonoBehaviour
 		public Quaternion rotation;
 	}
 
-	public LevelState CurrentLevelState;
+	public LevelMode CurrentLevelMode;
+	public BuildState CurrentBuildState;
 	public Transform[] Cars;
 	private InitialCarPosition[] InitialCarPositions;
 
@@ -36,15 +49,15 @@ public class LevelManager : MonoBehaviour
 
 	public void Play()
 	{
-		if (CurrentLevelState == LevelState.BUILD)
+		if (CurrentLevelMode == LevelMode.BUILD)
 		{
-			CurrentLevelState = LevelState.PLAY;
+			CurrentLevelMode = LevelMode.PLAY;
 		}
 	}
 
 	public void Stop()
 	{
-		if (CurrentLevelState == LevelState.PLAY)
+		if (CurrentLevelMode == LevelMode.PLAY)
 		{
 			for (int i = 0; i < Cars.Length; i++)
 			{
@@ -58,7 +71,12 @@ public class LevelManager : MonoBehaviour
 					p.Clear();
 				}
 			}
-			CurrentLevelState = LevelState.BUILD;
+			CurrentLevelMode = LevelMode.BUILD;
 		}
+	}
+
+	public void SelectBuildMode(BuildMode representedMode)
+	{
+		CurrentBuildState.CurrentMode = representedMode;
 	}
 }

@@ -4,6 +4,7 @@ public class HUDController : MonoBehaviour
 {
   public GameObject PlayButton;
   public GameObject StopButton;
+  public GameObject BuildModePanel;
   private LevelManager levelManager;
 
   void Awake()
@@ -13,8 +14,10 @@ public class HUDController : MonoBehaviour
 
   void Update()
   {
-    PlayButton.SetActive(levelManager.CurrentLevelState == LevelManager.LevelState.BUILD);
-    StopButton.SetActive(levelManager.CurrentLevelState == LevelManager.LevelState.PLAY);
+    PlayButton.SetActive(levelManager.CurrentLevelMode == LevelManager.LevelMode.BUILD);
+    StopButton.SetActive(levelManager.CurrentLevelMode == LevelManager.LevelMode.PLAY);
+
+    BuildModePanel.SetActive(levelManager.CurrentLevelMode == LevelManager.LevelMode.BUILD);
   }
 
   public void HandlePlayButtonClick()

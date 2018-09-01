@@ -21,7 +21,7 @@ public class CarDrive : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		if (levelManager.CurrentLevelState == LevelManager.LevelState.PLAY && !crashed)
+		if (levelManager.CurrentLevelMode == LevelManager.LevelMode.PLAY && !crashed)
 		{
 			var allTowers = FindObjectsOfType<Tower>();
 			float totalTurn = 0;

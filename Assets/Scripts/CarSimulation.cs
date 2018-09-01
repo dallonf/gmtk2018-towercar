@@ -19,7 +19,7 @@ public class CarSimulation : MonoBehaviour
 
 	void Update()
 	{
-		if (levelManager.CurrentLevelState == LevelManager.LevelState.BUILD) {
+		if (levelManager.CurrentLevelMode == LevelManager.LevelMode.BUILD) {
 			var allTowers = FindObjectsOfType<Tower>();
 			var timestep = 0.016f;
 			var positions = new List<Vector3>();
