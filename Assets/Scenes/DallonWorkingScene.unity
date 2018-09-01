@@ -343,7 +343,7 @@ LineRenderer:
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: a15e1cc2083750e48afe68107863b2cd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -363,17 +363,7 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
-  - {x: -18.823366, y: 7.8338604, z: -18.33359}
-  - {x: -19.935768, y: 7.170265, z: -16.503515}
-  - {x: -20.63852, y: 6.9346695, z: -15.79162}
-  - {x: -20.86132, y: 7.0519485, z: -15.130217}
-  - {x: -22.021088, y: 6.915119, z: -10.178155}
-  - {x: -21.910202, y: 7.078064, z: -9.772362}
-  - {x: -21.870209, y: 7.237133, z: -9.250889}
-  - {x: -21.643608, y: 7.572418, z: -8.858845}
+  m_Positions: []
   m_Parameters:
     serializedVersion: 2
     widthMultiplier: 1
@@ -424,7 +414,7 @@ LineRenderer:
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
-    textureMode: 0
+    textureMode: 1
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
@@ -440,6 +430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CarRadius: 2
+  offset: {x: 0, y: 0.75, z: 0}
   lineRenderer: {fileID: 0}
   car: {fileID: 951848700}
 --- !u!114 &951848700 stripped
@@ -491,6 +482,10 @@ Prefab:
       propertyPath: m_Name
       value: Car (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1560848451085688, guid: 16dde4f47a16ed047869942004f5b4d4, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16dde4f47a16ed047869942004f5b4d4, type: 2}
   m_IsPrefabAsset: 0
@@ -511,7 +506,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4130604365341994, guid: 74bfa4c5c8f2c7f449be16b400bfeac9, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 13.48
+      value: 7.1
       objectReference: {fileID: 0}
     - target: {fileID: 4130604365341994, guid: 74bfa4c5c8f2c7f449be16b400bfeac9, type: 2}
       propertyPath: m_LocalRotation.x
@@ -562,7 +557,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1691092853
 BoxCollider:
   m_ObjectHideFlags: 0
