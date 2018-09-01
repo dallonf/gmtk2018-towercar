@@ -23,6 +23,12 @@ public class InterfaceSpotlight : MonoBehaviour
         return;
       }
     }
+    else if (levelManager.IsInPlaceMode && levelManager.CurrentBuildState.HighlightedPosition != null)
+    {
+      transform.position = levelManager.CurrentBuildState.HighlightedPosition.Value.Flatten() + Offset;
+      light.enabled = true;
+      return;
+    }
 
     light.enabled = false;
   }

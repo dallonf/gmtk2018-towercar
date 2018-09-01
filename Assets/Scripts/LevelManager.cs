@@ -18,6 +18,7 @@ public class LevelManager : MonoBehaviour
 	{
 		public BuildMode CurrentMode;
 		public Tower HighlightedTower;
+		public Vector3? HighlightedPosition;
 	}
 
 	public enum BuildMode
@@ -51,6 +52,17 @@ public class LevelManager : MonoBehaviour
 				(
 					CurrentBuildState.CurrentMode == BuildMode.DELETE ||
 					CurrentBuildState.CurrentMode == BuildMode.MOVE
+				);
+		}
+	}
+
+	public bool IsInPlaceMode
+	{
+		get
+		{
+			return CurrentLevelMode == LevelMode.BUILD &&
+				(CurrentBuildState.CurrentMode == BuildMode.ADD_CLOCKWISE_TOWER ||
+					CurrentBuildState.CurrentMode == LevelManager.BuildMode.ADD_COUNTER_CLOCKWISE_TOWER
 				);
 		}
 	}
@@ -91,6 +103,10 @@ public class LevelManager : MonoBehaviour
 		{
 			CurrentBuildState.HighlightedTower = null;
 		}
+		if (!IsInPlaceMode && CurrentBuildState.HighlightedPosition != null)
+		{
+			CurrentBuildState.HighlightedPosition = null;
+		}
 	}
 
 	public void Play()
@@ -130,6 +146,19 @@ public class LevelManager : MonoBehaviour
 	public void UnhighlightTower()
 	{
 		CurrentBuildState.HighlightedTower = null;
+	}
+
+	public void SetHighlightedLocation(Vector3 location)
+	{
+		if (IsInPlaceMode)
+		{
+			CurrentBuildState.HighlightedPosition = location;
+		}
+	}
+
+	public void UnsetHighlightLocation()
+	{
+		CurrentBuildState.HighlightedPosition = null;
 	}
 
 	public void AddTower(TowerType towerType, Vector3 position)
