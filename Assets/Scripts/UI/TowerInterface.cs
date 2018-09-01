@@ -7,6 +7,7 @@ public class TowerInterface : MonoBehaviour, IPointerEnterHandler, IPointerExitH
   private LevelManager levelManager;
   private Tower tower;
   private int defaultLayer;
+  private bool dragging;
   private Vector3 preDragPosition;
   private Vector3 dragInitialPosition;
 
@@ -24,7 +25,7 @@ public class TowerInterface : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
   public void OnPointerExit(PointerEventData eventData)
   {
-    if (levelManager.CurrentBuildState.HighlightedTower == tower)
+    if (levelManager.CurrentBuildState.HighlightedTower == tower && !dragging)
     {
       levelManager.UnhighlightTower();
     }
@@ -41,22 +42,37 @@ public class TowerInterface : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
   public void OnBeginDrag(PointerEventData eventData)
   {
-    preDragPosition = transform.position;
-    dragInitialPosition = eventData.pointerCurrentRaycast.worldPosition.Flatten();
-    gameObject.layer = Physics.IgnoreRaycastLayer;
+    if (levelManager.CurrentLevelMode == LevelManager.LevelMode.BUILD && levelManager.CurrentBuildState.CurrentMode == LevelManager.BuildMode.MOVE)
+    {
+      preDragPosition = transform.position;
+      dragInitialPosition = eventData.pointerCurrentRaycast.worldPosition.Flatten();
+      gameObject.layer = Physics.IgnoreRaycastLayer;
+      dragging = true;
+      levelManager.HighlightTower(tower);
+    }
   }
 
   public void OnDrag(PointerEventData eventData)
   {
-    if (eventData.pointerCurrentRaycast.gameObject.GetComponent<FloorPlaneRaycaster>())
+    if (levelManager.CurrentLevelMode == LevelManager.LevelMode.BUILD && levelManager.CurrentBuildState.CurrentMode == LevelManager.BuildMode.MOVE)
     {
-      var newPosition = eventData.pointerCurrentRaycast.worldPosition;
-      transform.position = preDragPosition + (newPosition - dragInitialPosition);
+      if (eventData.pointerCurrentRaycast.gameObject &&
+        eventData.pointerCurrentRaycast.gameObject.GetComponent<GroundCollider>())
+      {
+        var newPosition = eventData.pointerCurrentRaycast.worldPosition.Flatten();
+        transform.position = preDragPosition + (newPosition - dragInitialPosition);
+      }
     }
   }
 
   public void OnEndDrag(PointerEventData eventData)
   {
     gameObject.layer = defaultLayer;
+    dragging = false;
+    if (levelManager.CurrentBuildState.HighlightedTower == tower &&
+      eventData.pointerCurrentRaycast.gameObject != gameObject)
+    {
+      levelManager.UnhighlightTower();
+    }
   }
 }
