@@ -56,10 +56,11 @@
      <Compile Include="Assets\Art\Scripts\CarBehavior.cs" />
      <Compile Include="Assets\Art\Scripts\SmokePuffBehavior.cs" />
      <Compile Include="Assets\Art\Scripts\TowerBehavior.cs" />
-     <Compile Include="Assets\CarDrive.cs" />
-     <Compile Include="Assets\CarSimulation.cs" />
-     <Compile Include="Assets\Scripts\Utils\VectorExtensions.cs" />
-     <Compile Include="Assets\Tower.cs" />
+     <Compile Include="Assets\Scripts\CarDrive.cs" />
+     <Compile Include="Assets\Scripts\CarSimulation.cs" />
+     <Compile Include="Assets\Scripts\LevelManager.cs" />
+     <Compile Include="Assets\Scripts\Tower.cs" />
+     <Compile Include="Assets\Scripts\Utils\MathUtils.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/dallo/devroot/gmtkjam2018-towercar/Tower Car/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
