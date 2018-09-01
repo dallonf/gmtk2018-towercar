@@ -7,30 +7,34 @@ public class CarDrive : MonoBehaviour
 	public float Speed;
 	public new Collider collider;
 
+	private LevelManager levelManager;
 	private bool crashed = false;
 
 	void Awake()
 	{
+		levelManager = FindObjectOfType<LevelManager>();
 		collider = GetComponent<Collider>();
 	}
 
 	void FixedUpdate()
 	{
-		if (crashed) return;
-
-		var allTowers = FindObjectsOfType<Tower>();
-		foreach (var tower in allTowers)
+		if (levelManager.CurrentLevelState == LevelManager.LevelState.PLAY && !crashed)
 		{
-			if (tower.IsCarAffected(transform.position))
+			var allTowers = FindObjectsOfType<Tower>();
+			foreach (var tower in allTowers)
 			{
-				transform.Rotate(Vector3.up, tower.TurnEffect * Time.deltaTime, Space.World);
+				if (tower.IsCarAffected(transform.position))
+				{
+					transform.Rotate(Vector3.up, tower.TurnEffect * Time.deltaTime, Space.World);
+				}
 			}
+			var newPosition = transform.position + Speed * Time.deltaTime * transform.forward;
+			transform.position = newPosition;
 		}
-		var newPosition = transform.position + Speed * Time.deltaTime * transform.forward;
-		transform.position = newPosition;
 	}
 
-	void OnCollisionEnter(Collision other) {
+	void OnCollisionEnter(Collision other)
+	{
 		crashed = true;
 	}
 }
