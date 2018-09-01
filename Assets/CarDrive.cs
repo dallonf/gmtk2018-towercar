@@ -5,9 +5,19 @@ using UnityEngine;
 public class CarDrive : MonoBehaviour
 {
 	public float Speed;
+	public Collider collider;
+
+	private bool crashed = false;
+
+	void Awake()
+	{
+		collider = GetComponent<Collider>();
+	}
 
 	void FixedUpdate()
 	{
+		if (crashed) return;
+
 		var allTowers = FindObjectsOfType<Tower>();
 		foreach (var tower in allTowers)
 		{
@@ -18,5 +28,9 @@ public class CarDrive : MonoBehaviour
 		}
 		var newPosition = transform.position + Speed * Time.deltaTime * transform.forward;
 		transform.position = newPosition;
+	}
+
+	void OnCollisionEnter(Collision other) {
+		crashed = true;
 	}
 }
