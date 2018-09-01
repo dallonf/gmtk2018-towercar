@@ -33,11 +33,13 @@ public class LevelManager : MonoBehaviour
 		public Quaternion rotation;
 	}
 
+	public int ParTowers;
+	public int ParTime;
+	public CarDrive[] Cars;
 	public LevelMode CurrentLevelMode;
 	public BuildState CurrentBuildState;
 	public GameObject ClockwiseTowerPrefab;
 	public GameObject CounterClockwiseTowerPrefab;
-	public CarDrive[] Cars;
 	private InitialCarPosition[] InitialCarPositions;
 
 	public bool CanHighlightTowers
@@ -49,8 +51,31 @@ public class LevelManager : MonoBehaviour
 		}
 	}
 
+	public int CurrentTowers
+	{
+		get
+		{
+			return FindObjectsOfType<Tower>().Length;
+		}
+	}
+
+	public int CurrentTime
+	{
+		get
+		{
+			return Mathf.CeilToInt(currentTime);
+		}
+	}
+
+	private float currentTime = 0;
+
 	void Update()
 	{
+		if (CurrentLevelMode == LevelMode.PLAY)
+		{
+			currentTime += Time.deltaTime;
+		}
+
 		// check for victory condition
 		if (CurrentLevelMode == LevelMode.PLAY && Cars.All(x => x.GotToGoal))
 		{
@@ -68,6 +93,7 @@ public class LevelManager : MonoBehaviour
 	{
 		if (CurrentLevelMode == LevelMode.BUILD)
 		{
+			currentTime = 0;
 			CurrentLevelMode = LevelMode.PLAY;
 		}
 	}
@@ -120,5 +146,15 @@ public class LevelManager : MonoBehaviour
 
 		GameObject.Instantiate(prefab, position.Flatten(), Quaternion.identity);
 	}
-
+	public void KeepPlaying()
+	{
+		if (CurrentLevelMode == LevelMode.WIN)
+		{
+			for (int i = 0; i < Cars.Length; i++)
+			{
+				Cars[i].Reset();
+			}
+			CurrentLevelMode = LevelMode.BUILD;
+		}
+	}
 }

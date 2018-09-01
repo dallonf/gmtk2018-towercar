@@ -30,6 +30,13 @@ public class HUDController : MonoBehaviour
 
     BuildModePanel.SetActive(levelManager.CurrentLevelMode == LevelManager.LevelMode.BUILD);
     WinPanel.WinPanel.SetActive(levelManager.CurrentLevelMode == LevelManager.LevelMode.WIN);
+    if (levelManager.CurrentLevelMode == LevelManager.LevelMode.WIN)
+    {
+      WinPanel.YourTowersText.text = levelManager.CurrentTowers.ToString();
+      WinPanel.YourTimeText.text = System.TimeSpan.FromSeconds(levelManager.CurrentTime).FormatMinutesSeconds();
+      WinPanel.ParTowersText.text = levelManager.ParTowers.ToString();
+      WinPanel.ParTimeText.text = System.TimeSpan.FromSeconds(levelManager.ParTime).FormatMinutesSeconds();
+    }
   }
 
   public void HandlePlayButtonClick()
@@ -40,5 +47,10 @@ public class HUDController : MonoBehaviour
   public void HandleStopButtonClick()
   {
     levelManager.Stop();
+  }
+
+  public void HandleKeepPlayingButtonClick()
+  {
+    levelManager.KeepPlaying();
   }
 }
