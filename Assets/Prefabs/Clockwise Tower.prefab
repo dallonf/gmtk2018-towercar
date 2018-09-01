@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 4130604365341994}
   - component: {fileID: 114879829448720920}
   - component: {fileID: 136923756875563950}
+  - component: {fileID: 114216613451377076}
   m_Layer: 0
   m_Name: Clockwise Tower
   m_TagString: Untagged
@@ -305,6 +306,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 0
+--- !u!114 &114216613451377076
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1850112978404484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd7b43afd5e727e4d86f2c89ae67f86e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114879829448720920
 MonoBehaviour:
   m_ObjectHideFlags: 1

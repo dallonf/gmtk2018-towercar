@@ -13,9 +13,11 @@ public class LevelManager : MonoBehaviour
 		WIN
 	}
 
+	[Serializable]
 	public struct BuildState
 	{
 		public BuildMode CurrentMode;
+		public Tower HighlightedTower;
 	}
 
 	public enum BuildMode
@@ -36,7 +38,16 @@ public class LevelManager : MonoBehaviour
 	public Transform[] Cars;
 	private InitialCarPosition[] InitialCarPositions;
 
-	private void Start()
+	public bool CanHighlightTowers
+	{
+		get
+		{
+			return CurrentLevelMode == LevelMode.BUILD &&
+				CurrentBuildState.CurrentMode == BuildMode.DELETE;
+		}
+	}
+
+	void Start()
 	{
 		InitialCarPositions = Cars.Select(
 			x => new InitialCarPosition
@@ -45,6 +56,15 @@ public class LevelManager : MonoBehaviour
 					rotation = x.rotation
 			}
 		).ToArray();
+	}
+
+	void Update()
+	{
+		// clean up any invalid states
+		if (!CanHighlightTowers && CurrentBuildState.HighlightedTower)
+		{
+			CurrentBuildState.HighlightedTower = null;
+		}
 	}
 
 	public void Play()
@@ -79,4 +99,18 @@ public class LevelManager : MonoBehaviour
 	{
 		CurrentBuildState.CurrentMode = representedMode;
 	}
+
+	public void HighlightTower(Tower tower)
+	{
+		if (CanHighlightTowers)
+		{
+			CurrentBuildState.HighlightedTower = tower;
+		}
+	}
+
+	public void UnhighlightTower()
+	{
+		CurrentBuildState.HighlightedTower = null;
+	}
+
 }
