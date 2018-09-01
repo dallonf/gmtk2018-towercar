@@ -6,12 +6,13 @@ public class TowerInterface : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 {
   private LevelManager levelManager;
   private Tower tower;
-
+  private int defaultLayer;
   private Vector3 preDragPosition;
   private Vector3 dragInitialPosition;
 
   void Awake()
   {
+    defaultLayer = gameObject.layer;
     levelManager = FindObjectOfType<LevelManager>();
     tower = GetComponent<Tower>();
   }
@@ -42,6 +43,7 @@ public class TowerInterface : MonoBehaviour, IPointerEnterHandler, IPointerExitH
   {
     preDragPosition = transform.position;
     dragInitialPosition = eventData.pointerCurrentRaycast.worldPosition.Flatten();
+    gameObject.layer = Physics.IgnoreRaycastLayer;
   }
 
   public void OnDrag(PointerEventData eventData)
@@ -55,6 +57,6 @@ public class TowerInterface : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
   public void OnEndDrag(PointerEventData eventData)
   {
-    Debug.Log("OnEndDrag");
+    gameObject.layer = defaultLayer;
   }
 }
