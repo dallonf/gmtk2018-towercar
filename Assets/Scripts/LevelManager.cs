@@ -37,7 +37,7 @@ public class LevelManager : MonoBehaviour
 	public BuildState CurrentBuildState;
 	public GameObject ClockwiseTowerPrefab;
 	public GameObject CounterClockwiseTowerPrefab;
-	public Transform[] Cars;
+	public CarDrive[] Cars;
 	private InitialCarPosition[] InitialCarPositions;
 
 	public bool CanHighlightTowers
@@ -47,17 +47,6 @@ public class LevelManager : MonoBehaviour
 			return CurrentLevelMode == LevelMode.BUILD &&
 				CurrentBuildState.CurrentMode == BuildMode.DELETE;
 		}
-	}
-
-	void Start()
-	{
-		InitialCarPositions = Cars.Select(
-			x => new InitialCarPosition
-			{
-				position = x.position,
-					rotation = x.rotation
-			}
-		).ToArray();
 	}
 
 	void Update()
@@ -83,15 +72,7 @@ public class LevelManager : MonoBehaviour
 		{
 			for (int i = 0; i < Cars.Length; i++)
 			{
-				// Reset car position
-				Cars[i].position = InitialCarPositions[i].position;
-				Cars[i].rotation = InitialCarPositions[i].rotation;
-				// Clear particle effects (they look weird without the car)
-				var particles = Cars[i].gameObject.GetComponentsInChildren<ParticleSystem>();
-				foreach (var p in particles)
-				{
-					p.Clear();
-				}
+				Cars[i].Reset();
 			}
 			CurrentLevelMode = LevelMode.BUILD;
 		}

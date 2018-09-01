@@ -759,7 +759,7 @@ MonoBehaviour:
   CounterClockwiseTowerPrefab: {fileID: 1921351412123868, guid: 396e0a13b8c9d18459a3f344904c9f60,
     type: 2}
   Cars:
-  - {fileID: 2034016053}
+  - {fileID: 951848700}
 --- !u!4 &729125015
 Transform:
   m_ObjectHideFlags: 0
@@ -2068,11 +2068,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62d93a4ea8f865042901a9fe5340969e, type: 2}
   m_IsPrefabAsset: 0
---- !u!4 &2034016053 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4366896445017264, guid: 16dde4f47a16ed047869942004f5b4d4,
-    type: 2}
-  m_PrefabInternal: {fileID: 2044552918}
 --- !u!1001 &2044552918
 Prefab:
   m_ObjectHideFlags: 0

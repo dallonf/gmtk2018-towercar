@@ -20,8 +20,10 @@ public class TowerInterface : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
   public void OnPointerExit(PointerEventData eventData)
   {
-    if (levelManager.CurrentBuildState.HighlightedTower == tower);
-    levelManager.UnhighlightTower();
+    if (levelManager.CurrentBuildState.HighlightedTower == tower)
+    {
+      levelManager.UnhighlightTower();
+    }
   }
 
   public void OnPointerClick(PointerEventData eventData)

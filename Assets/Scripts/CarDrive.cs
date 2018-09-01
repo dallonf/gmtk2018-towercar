@@ -10,7 +10,24 @@ public class CarDrive : MonoBehaviour
 	private CarBehavior carModelBehavior;
 
 	private LevelManager levelManager;
+	private Vector3 initialPosition;
+	private Quaternion initalRotation;
 	private bool crashed = false;
+
+	public void Reset()
+	{
+		carModelBehavior.StopSmoke();
+		GetComponentInChildren<ParticleSystem>().Clear();
+		crashed = false;
+		transform.position = initialPosition;
+		transform.rotation = initalRotation;
+	}
+
+	void Start()
+	{
+		initialPosition = transform.position;
+		initalRotation = transform.rotation;
+	}
 
 	void Awake()
 	{
