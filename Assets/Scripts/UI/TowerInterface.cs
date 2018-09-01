@@ -2,10 +2,13 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-public class TowerInterface : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
+public class TowerInterface : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
   private LevelManager levelManager;
   private Tower tower;
+
+  private Vector3 preDragPosition;
+  private Vector3 dragInitialPosition;
 
   void Awake()
   {
@@ -33,5 +36,25 @@ public class TowerInterface : MonoBehaviour, IPointerEnterHandler, IPointerExitH
       levelManager.UnhighlightTower();
       Destroy(gameObject);
     }
+  }
+
+  public void OnBeginDrag(PointerEventData eventData)
+  {
+    preDragPosition = transform.position;
+    dragInitialPosition = eventData.pointerCurrentRaycast.worldPosition.Flatten();
+  }
+
+  public void OnDrag(PointerEventData eventData)
+  {
+    if (eventData.pointerCurrentRaycast.gameObject.GetComponent<FloorPlaneRaycaster>())
+    {
+      var newPosition = eventData.pointerCurrentRaycast.worldPosition;
+      transform.position = preDragPosition + (newPosition - dragInitialPosition);
+    }
+  }
+
+  public void OnEndDrag(PointerEventData eventData)
+  {
+    Debug.Log("OnEndDrag");
   }
 }

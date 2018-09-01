@@ -22,9 +22,10 @@ public class LevelManager : MonoBehaviour
 
 	public enum BuildMode
 	{
-		DELETE,
+		MOVE,
 		ADD_CLOCKWISE_TOWER,
-		ADD_COUNTER_CLOCKWISE_TOWER
+		ADD_COUNTER_CLOCKWISE_TOWER,
+		DELETE,
 	}
 
 	struct InitialCarPosition
@@ -47,7 +48,10 @@ public class LevelManager : MonoBehaviour
 		get
 		{
 			return CurrentLevelMode == LevelMode.BUILD &&
-				CurrentBuildState.CurrentMode == BuildMode.DELETE;
+				(
+					CurrentBuildState.CurrentMode == BuildMode.DELETE ||
+					CurrentBuildState.CurrentMode == BuildMode.MOVE
+				);
 		}
 	}
 
