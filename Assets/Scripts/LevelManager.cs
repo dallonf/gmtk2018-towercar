@@ -51,6 +51,12 @@ public class LevelManager : MonoBehaviour
 
 	void Update()
 	{
+		// check for victory condition
+		if (CurrentLevelMode == LevelMode.PLAY && Cars.All(x => x.GotToGoal))
+		{
+			CurrentLevelMode = LevelMode.WIN;
+		}
+
 		// clean up any invalid states
 		if (!CanHighlightTowers && CurrentBuildState.HighlightedTower)
 		{

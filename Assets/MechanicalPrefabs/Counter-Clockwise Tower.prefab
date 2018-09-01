@@ -329,7 +329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Radius: 12.5
-  TurnEffect: -45
+  TurnEffect: -90
 --- !u!136 &136487713327666844
 CapsuleCollider:
   m_ObjectHideFlags: 1

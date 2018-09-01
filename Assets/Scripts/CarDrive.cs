@@ -7,6 +7,8 @@ public class CarDrive : MonoBehaviour
 	public float Speed;
 	public new Collider collider;
 
+	public bool GotToGoal { get; set; }
+
 	private CarBehavior carModelBehavior;
 
 	private LevelManager levelManager;
@@ -19,6 +21,7 @@ public class CarDrive : MonoBehaviour
 		carModelBehavior.StopSmoke();
 		GetComponentInChildren<ParticleSystem>().Clear();
 		crashed = false;
+		GotToGoal = false;
 		transform.position = initialPosition;
 		transform.rotation = initalRotation;
 	}
@@ -38,7 +41,7 @@ public class CarDrive : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		if (levelManager.CurrentLevelMode == LevelManager.LevelMode.PLAY && !crashed)
+		if (levelManager.CurrentLevelMode == LevelManager.LevelMode.PLAY && !crashed && !GotToGoal)
 		{
 			var allTowers = FindObjectsOfType<Tower>();
 			float totalTurn = 0;
@@ -78,5 +81,13 @@ public class CarDrive : MonoBehaviour
 	void OnCollisionEnter(Collision other)
 	{
 		crashed = true;
+	}
+
+	void OnTriggerEnter(Collider other)
+	{
+		if (other.GetComponent<GoalTrigger>())
+		{
+			GotToGoal = true;
+		}
 	}
 }

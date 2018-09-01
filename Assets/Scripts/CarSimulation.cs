@@ -8,7 +8,7 @@ public class CarSimulation : MonoBehaviour
 	public Vector3 offset = Vector3.up;
 	public LineRenderer lineRenderer;
 	public CarDrive car;
-	
+
 	private LevelManager levelManager;
 
 	void Awake()
@@ -19,7 +19,8 @@ public class CarSimulation : MonoBehaviour
 
 	void Update()
 	{
-		if (levelManager.CurrentLevelMode == LevelManager.LevelMode.BUILD) {
+		if (levelManager.CurrentLevelMode == LevelManager.LevelMode.BUILD)
+		{
 			var allTowers = FindObjectsOfType<Tower>();
 			var timestep = 0.016f;
 			var positions = new List<Vector3>();
@@ -37,7 +38,7 @@ public class CarSimulation : MonoBehaviour
 				}
 				currentPosition += forward * car.Speed * timestep;
 				positions.Add(currentPosition + offset);
-				if (Physics.CheckSphere(currentPosition, CarRadius, LayerMask.GetMask("Default")))
+				if (Physics.CheckSphere(currentPosition, CarRadius, LayerMask.GetMask("Default"), QueryTriggerInteraction.Ignore))
 				{
 					break;
 				}
@@ -45,7 +46,9 @@ public class CarSimulation : MonoBehaviour
 			lineRenderer.positionCount = positions.Count;
 			lineRenderer.SetPositions(positions.ToArray());
 			lineRenderer.enabled = true;
-		} else {
+		}
+		else
+		{
 			lineRenderer.enabled = false;
 		}
 	}
