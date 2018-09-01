@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 65691535469014078}
   - component: {fileID: 114726474329996678}
   - component: {fileID: 54857009733413974}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Car
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 4779759423119520}
   - component: {fileID: 33295332026819210}
   - component: {fileID: 23948946457589946}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CarFrame
   m_TagString: Untagged
   m_Icon: {fileID: 0}

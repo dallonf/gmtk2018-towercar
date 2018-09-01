@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CarSimulation : MonoBehaviour
 {
+	public float CarRadius = 2;
 	public LineRenderer lineRenderer;
 	public CarDrive car;
 
@@ -23,6 +24,10 @@ public class CarSimulation : MonoBehaviour
 		{
 			currentPosition += forward * car.Speed * timestep;
 			positions.Add(currentPosition);
+			if (Physics.CheckSphere(currentPosition, CarRadius, LayerMask.GetMask("Default")))
+			{
+				break;
+			}
 		}
 		lineRenderer.positionCount = positions.Count;
 		lineRenderer.SetPositions(positions.ToArray());
