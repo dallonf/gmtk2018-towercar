@@ -48,10 +48,17 @@ public class LevelManager : MonoBehaviour
 		{
 			for (int i = 0; i < Cars.Length; i++)
 			{
+				// Reset car position
 				Cars[i].position = InitialCarPositions[i].position;
 				Cars[i].rotation = InitialCarPositions[i].rotation;
-				CurrentLevelState = LevelState.BUILD;
+				// Clear particle effects (they look weird without the car)
+				var particles = Cars[i].gameObject.GetComponentsInChildren<ParticleSystem>();
+				foreach (var p in particles)
+				{
+					p.Clear();
+				}
 			}
+			CurrentLevelState = LevelState.BUILD;
 		}
 	}
 }

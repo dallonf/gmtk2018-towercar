@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CarBehavior : MonoBehaviour {
+public class CarBehavior : MonoBehaviour
+{
 
     public GameObject SmokePuffPrefab;
 
@@ -20,15 +21,16 @@ public class CarBehavior : MonoBehaviour {
     private float turnTargetAngle = 0;
     private readonly Transform[] wheels = new Transform[2];
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         direction = Direction.Straight;
         wheels[0] = transform.GetChild(0);
         wheels[1] = transform.GetChild(1);
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update()
     {
         switch (direction)
         {
@@ -64,7 +66,11 @@ public class CarBehavior : MonoBehaviour {
 
     public void StartSmoke()
     {
-        GetComponent<ParticleSystem>().Play();
+        var particles = GetComponent<ParticleSystem>();
+        if (!particles.isPlaying)
+        {
+            GetComponent<ParticleSystem>().Play();
+        }
     }
 
     public void StopSmoke()
