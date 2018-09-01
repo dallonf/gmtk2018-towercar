@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-public class TowerInterface : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class TowerInterface : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
   private LevelManager levelManager;
   private Tower tower;
@@ -22,5 +22,14 @@ public class TowerInterface : MonoBehaviour, IPointerEnterHandler, IPointerExitH
   {
     if (levelManager.CurrentBuildState.HighlightedTower == tower);
     levelManager.UnhighlightTower();
+  }
+
+  public void OnPointerClick(PointerEventData eventData)
+  {
+    if (levelManager.CurrentLevelMode == LevelManager.LevelMode.BUILD && levelManager.CurrentBuildState.CurrentMode == LevelManager.BuildMode.DELETE)
+    {
+      levelManager.UnhighlightTower();
+      Destroy(gameObject);
+    }
   }
 }
