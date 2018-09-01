@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\CarSimulation.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\Tower.cs" />
+     <Compile Include="Assets\Scripts\UI\HUDController.cs" />
      <Compile Include="Assets\Scripts\Utils\MathUtils.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/dallo/devroot/gmtkjam2018-towercar/Tower Car/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
