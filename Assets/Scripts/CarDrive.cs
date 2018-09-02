@@ -7,6 +7,7 @@ public class CarDrive : MonoBehaviour
 	public float Speed;
 	public new Collider collider;
 	public AudioClip CrashAudioClip;
+	public AudioClip BrakeAudioClip;
 	public AudioClip RevAudioClip;
 	public AudioSource EngineLoopAudioSource;
 	public AudioSource OneShotAudioSource;
@@ -30,7 +31,7 @@ public class CarDrive : MonoBehaviour
 		transform.rotation = initalRotation;
 		EngineLoopAudioSource.Play();
 	}
-	
+
 	public void OnPlay()
 	{
 		OneShotAudioSource.PlayOneShot(RevAudioClip);
@@ -51,12 +52,6 @@ public class CarDrive : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		if (crashed && EngineLoopAudioSource.isPlaying)
-		{
-			EngineLoopAudioSource.Stop();
-			OneShotAudioSource.PlayOneShot(CrashAudioClip, 1);
-		}
-
 		if (levelManager.CurrentLevelMode == LevelManager.LevelMode.PLAY && !crashed && !GotToGoal)
 		{
 			var allTowers = FindObjectsOfType<Tower>();
@@ -81,7 +76,7 @@ public class CarDrive : MonoBehaviour
 					QueryTriggerInteraction.Ignore
 				))
 			{
-				crashed = true;
+				Crash(CrashType.STOP);
 			}
 
 			carModelBehavior.StartSmoke();
@@ -107,7 +102,29 @@ public class CarDrive : MonoBehaviour
 
 	void OnCollisionEnter(Collision other)
 	{
+		Crash();
+	}
+
+	enum CrashType
+	{
+		COLLIDE,
+		STOP
+	}
+
+	private void Crash(CrashType crashType = CrashType.COLLIDE)
+	{
 		crashed = true;
+		EngineLoopAudioSource.Stop();
+
+		switch (crashType)
+		{
+			case CrashType.COLLIDE:
+				OneShotAudioSource.PlayOneShot(CrashAudioClip);
+				break;
+			case CrashType.STOP:
+				OneShotAudioSource.PlayOneShot(BrakeAudioClip);
+				break;
+		}
 	}
 
 	void OnTriggerEnter(Collider other)
