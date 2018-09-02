@@ -1496,6 +1496,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114903051715091016, guid: 207bddf967c0d61469c6ccb85f5ac520,
+        type: 2}
+      propertyPath: Cars.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4211115104544758, guid: 207bddf967c0d61469c6ccb85f5ac520, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
