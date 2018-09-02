@@ -171,6 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LevelName: 
+  GrayIfBeaten: 1
 --- !u!222 &222325992753557042
 CanvasRenderer:
   m_ObjectHideFlags: 1
