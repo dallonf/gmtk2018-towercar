@@ -115,6 +115,10 @@ public class LevelManager : MonoBehaviour
 		{
 			currentTime = 0;
 			CurrentLevelMode = LevelMode.PLAY;
+			for (int i = 0; i < Cars.Length; i++)
+			{
+				Cars[i].OnPlay();
+			}
 		}
 	}
 

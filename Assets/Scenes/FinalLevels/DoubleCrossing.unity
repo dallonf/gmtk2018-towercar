@@ -264,7 +264,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4033928562926952, guid: cc1d9caceea7c9e43b9b25a163b2826f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.3
+      value: -0.31
       objectReference: {fileID: 0}
     - target: {fileID: 4033928562926952, guid: cc1d9caceea7c9e43b9b25a163b2826f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -904,10 +904,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 29
       objectReference: {fileID: 0}
-    - target: {fileID: 4745733663937084, guid: 3fdbd9c74016dce40a5eca3339ac7e0f, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1833344976028212, guid: 3fdbd9c74016dce40a5eca3339ac7e0f, type: 2}
       propertyPath: m_Name
       value: Goal (1)
@@ -1258,7 +1254,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4033928562926952, guid: cc1d9caceea7c9e43b9b25a163b2826f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.3
+      value: -0.31
       objectReference: {fileID: 0}
     - target: {fileID: 4033928562926952, guid: cc1d9caceea7c9e43b9b25a163b2826f, type: 2}
       propertyPath: m_LocalPosition.z
