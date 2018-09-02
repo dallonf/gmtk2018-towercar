@@ -904,10 +904,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 29
       objectReference: {fileID: 0}
-    - target: {fileID: 4745733663937084, guid: 3fdbd9c74016dce40a5eca3339ac7e0f, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1833344976028212, guid: 3fdbd9c74016dce40a5eca3339ac7e0f, type: 2}
       propertyPath: m_Name
       value: Goal (1)
