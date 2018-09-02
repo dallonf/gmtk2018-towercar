@@ -1314,6 +1314,8 @@ MonoBehaviour:
     YourTimeText: {fileID: 114935195093409452}
     ParTowersText: {fileID: 114540081255602632}
     ParTimeText: {fileID: 114973890956801054}
+  CloseButton: {fileID: 1374758977938408}
+  ClosePanel: {fileID: 1420129037937986}
 --- !u!114 &114173724436250344
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3486,9 +3488,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ParTowers: 2
   ParTime: 10
-  Cars:
-  - {fileID: 0}
-  - {fileID: 0}
+  Cars: []
   CurrentLevelMode: 0
   CurrentBuildState:
     CurrentMode: 0
