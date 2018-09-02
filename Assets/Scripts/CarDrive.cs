@@ -6,6 +6,9 @@ public class CarDrive : MonoBehaviour
 {
 	public float Speed;
 	public new Collider collider;
+	public AudioClip CrashAudioClip;
+	public AudioSource EngineLoopAudioSource;
+	public AudioSource OneShotAudioSource;
 
 	public bool GotToGoal { get; set; }
 
@@ -24,6 +27,7 @@ public class CarDrive : MonoBehaviour
 		GotToGoal = false;
 		transform.position = initialPosition;
 		transform.rotation = initalRotation;
+		EngineLoopAudioSource.Play();
 	}
 
 	void Start()
@@ -41,6 +45,12 @@ public class CarDrive : MonoBehaviour
 
 	void FixedUpdate()
 	{
+		if (crashed && EngineLoopAudioSource.isPlaying)
+		{
+			EngineLoopAudioSource.Stop();
+			OneShotAudioSource.PlayOneShot(CrashAudioClip, 1);
+		}
+
 		if (levelManager.CurrentLevelMode == LevelManager.LevelMode.PLAY && !crashed && !GotToGoal)
 		{
 			var allTowers = FindObjectsOfType<Tower>();
