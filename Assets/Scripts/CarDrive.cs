@@ -57,6 +57,17 @@ public class CarDrive : MonoBehaviour
 			var newPosition = transform.position + Speed * Time.deltaTime * transform.forward;
 			transform.position = newPosition;
 
+			// Check if car is above ground, "crash" otherwise
+			if (!Physics.Raycast(
+					transform.position + Vector3.up * 0.5f,
+					Vector3.down, 2,
+					LayerMask.GetMask("Ground"),
+					QueryTriggerInteraction.Ignore
+				))
+			{
+				crashed = true;
+			}
+
 			carModelBehavior.StartSmoke();
 			if (totalTurn > Mathf.Epsilon)
 			{
