@@ -12,9 +12,24 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: b3a13e30b4eab144fb740e3e3b5669f7
   - enabled: 1
-    path: Assets/Scenes/InTheoryWeCouldShipThis.unity
+    path: Assets/Scenes/FinalLevels/FirstWorkingLevel.unity
     guid: a7355f868ecaa904e82ee694178d8cd8
   - enabled: 1
+    path: Assets/Scenes/FinalLevels/BridgeCrossing.unity
+    guid: 2bb58f4ca279b244ba77cde7cc8922ae
+  - enabled: 1
+    path: Assets/Scenes/FinalLevels/CollisionCourse.unity
+    guid: 3c82cc8513480f74e9c2a1168cdde71d
+  - enabled: 1
+    path: Assets/Scenes/FinalLevels/Debris.unity
+    guid: 8d07134253590c6439bb738bd8b95ed9
+  - enabled: 1
+    path: Assets/Scenes/FinalLevels/DoubleCrossing.unity
+    guid: 032909d0664f39d4284f320907f6855f
+  - enabled: 1
+    path: Assets/Scenes/FinalLevels/Tutorial.unity
+    guid: e23a6062bd3d7cb4c9f01c3db7f049b3
+  - enabled: 0
     path: Assets/Scenes/DallonWorkingScene.unity
     guid: cc25b1f8afb302444b43da8b5271f816
   m_configObjects: {}
