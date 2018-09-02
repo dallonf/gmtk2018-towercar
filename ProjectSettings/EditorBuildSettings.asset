@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinalLevels/CloseShave.unity
     guid: c018647335fe93749b2b07b529335199
+  - enabled: 1
+    path: Assets/Scenes/FinalLevels/SkinnyPath.unity
+    guid: 03849b9d9f1963f40a8e3b870c63fe8c
+  - enabled: 1
+    path: Assets/Scenes/FinalLevels/TooManyBridges.unity
+    guid: 8fd91eaf6d8809f4991b71ea5a3ad7de
   m_configObjects: {}
