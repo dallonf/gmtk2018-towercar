@@ -43,12 +43,24 @@ public class CarSimulation : MonoBehaviour
 				}
 
 				positions.Add(currentPosition + offset);
+
 				// The commented code below will stop the line if it collides with an obstacle...
 				// but I'm interested in trying the game without it for awhile
 				// if (Physics.CheckSphere(currentPosition, CarRadius, LayerMask.GetMask("Default"), QueryTriggerInteraction.Ignore))
 				// {
 				// 	break;
 				// }
+
+				// but do check for ground beneath it
+				if (!Physics.Raycast(
+						currentPosition + Vector3.up * 0.5f,
+						Vector3.down, 2,
+						LayerMask.GetMask("Ground"),
+						QueryTriggerInteraction.Ignore
+					))
+				{
+					break;
+				}
 			}
 			lineRenderer.positionCount = positions.Count;
 			lineRenderer.SetPositions(positions.ToArray());
