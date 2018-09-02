@@ -16,6 +16,8 @@ public class HUDController : MonoBehaviour
   public GameObject StopButton;
   public GameObject BuildModePanel;
   public WinPanelElements WinPanel;
+  public GameObject CloseButton;
+  public GameObject ClosePanel;
   private LevelManager levelManager;
 
   void Awake()
@@ -36,6 +38,12 @@ public class HUDController : MonoBehaviour
       WinPanel.YourTimeText.text = System.TimeSpan.FromSeconds(levelManager.CurrentTime).FormatMinutesSeconds();
       WinPanel.ParTowersText.text = levelManager.ParTowers.ToString();
       WinPanel.ParTimeText.text = System.TimeSpan.FromSeconds(levelManager.ParTime).FormatMinutesSeconds();
+    }
+
+    CloseButton.SetActive(levelManager.CurrentLevelMode == LevelManager.LevelMode.BUILD);
+    if (ClosePanel.activeSelf && levelManager.CurrentLevelMode != LevelManager.LevelMode.BUILD)
+    {
+      ClosePanel.SetActive(false);
     }
   }
 

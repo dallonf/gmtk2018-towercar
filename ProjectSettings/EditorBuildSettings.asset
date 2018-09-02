@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: b3a13e30b4eab144fb740e3e3b5669f7
@@ -29,7 +26,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinalLevels/Tutorial.unity
     guid: e23a6062bd3d7cb4c9f01c3db7f049b3
-  - enabled: 0
-    path: Assets/Scenes/DallonWorkingScene.unity
-    guid: cc25b1f8afb302444b43da8b5271f816
   m_configObjects: {}
