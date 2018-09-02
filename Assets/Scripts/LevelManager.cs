@@ -95,6 +95,7 @@ public class LevelManager : MonoBehaviour
 		// check for victory condition
 		if (CurrentLevelMode == LevelMode.PLAY && Cars.All(x => x.GotToGoal))
 		{
+			LevelProgress.GetInstance().LogLevelBeaten();
 			CurrentLevelMode = LevelMode.WIN;
 		}
 
