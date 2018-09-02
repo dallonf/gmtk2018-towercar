@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: b3a13e30b4eab144fb740e3e3b5669f7
+  - enabled: 1
     path: Assets/Scenes/InTheoryWeCouldShipThis.unity
     guid: a7355f868ecaa904e82ee694178d8cd8
+  - enabled: 1
+    path: Assets/Scenes/DallonWorkingScene.unity
+    guid: cc25b1f8afb302444b43da8b5271f816
   m_configObjects: {}
