@@ -2278,7 +2278,7 @@ Prefab:
     - target: {fileID: 114903051715091016, guid: 207bddf967c0d61469c6ccb85f5ac520,
         type: 2}
       propertyPath: ParTowers
-      value: 6
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 114903051715091016, guid: 207bddf967c0d61469c6ccb85f5ac520,
         type: 2}
@@ -2288,7 +2288,7 @@ Prefab:
     - target: {fileID: 114903051715091016, guid: 207bddf967c0d61469c6ccb85f5ac520,
         type: 2}
       propertyPath: ParTime
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 114903051715091016, guid: 207bddf967c0d61469c6ccb85f5ac520,
         type: 2}
