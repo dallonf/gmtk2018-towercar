@@ -593,6 +593,7 @@ MonoBehaviour:
   Speed: 20
   collider: {fileID: 0}
   CrashAudioClip: {fileID: 8300000, guid: 3f25308330a806f4f97e36682c7f0536, type: 3}
+  RevAudioClip: {fileID: 8300000, guid: 523b1a1ca955c044db25f524516c2f88, type: 3}
   EngineLoopAudioSource: {fileID: 82700688734897028}
   OneShotAudioSource: {fileID: 82689955415986762}
 --- !u!120 &120830454445612542

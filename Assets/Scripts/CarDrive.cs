@@ -7,6 +7,7 @@ public class CarDrive : MonoBehaviour
 	public float Speed;
 	public new Collider collider;
 	public AudioClip CrashAudioClip;
+	public AudioClip RevAudioClip;
 	public AudioSource EngineLoopAudioSource;
 	public AudioSource OneShotAudioSource;
 
@@ -28,6 +29,11 @@ public class CarDrive : MonoBehaviour
 		transform.position = initialPosition;
 		transform.rotation = initalRotation;
 		EngineLoopAudioSource.Play();
+	}
+	
+	public void OnPlay()
+	{
+		OneShotAudioSource.PlayOneShot(RevAudioClip);
 	}
 
 	void Start()
