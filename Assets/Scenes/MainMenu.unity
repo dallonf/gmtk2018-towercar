@@ -425,6 +425,23 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.99998903
       objectReference: {fileID: 0}
+    - target: {fileID: 114404811147645094, guid: 38792308fbc548a47ab9ea6ed6cebb43,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 756e0c23779c58b48952fc7a277df6b6,
+        type: 3}
+    - target: {fileID: 114404811147645094, guid: 38792308fbc548a47ab9ea6ed6cebb43,
+        type: 2}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114987671055050276, guid: 38792308fbc548a47ab9ea6ed6cebb43,
+        type: 2}
+      propertyPath: checkMarkPrefab
+      value: 
+      objectReference: {fileID: 1389259743721324, guid: c78de39a964160e41ab671c8178bd590,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38792308fbc548a47ab9ea6ed6cebb43, type: 2}
   m_IsPrefabAsset: 0
@@ -653,6 +670,23 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.99998903
       objectReference: {fileID: 0}
+    - target: {fileID: 114404811147645094, guid: 38792308fbc548a47ab9ea6ed6cebb43,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 756e0c23779c58b48952fc7a277df6b6,
+        type: 3}
+    - target: {fileID: 114404811147645094, guid: 38792308fbc548a47ab9ea6ed6cebb43,
+        type: 2}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114987671055050276, guid: 38792308fbc548a47ab9ea6ed6cebb43,
+        type: 2}
+      propertyPath: checkMarkPrefab
+      value: 
+      objectReference: {fileID: 1389259743721324, guid: c78de39a964160e41ab671c8178bd590,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38792308fbc548a47ab9ea6ed6cebb43, type: 2}
   m_IsPrefabAsset: 0
@@ -853,6 +887,23 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.9999891
       objectReference: {fileID: 0}
+    - target: {fileID: 114404811147645094, guid: 38792308fbc548a47ab9ea6ed6cebb43,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 756e0c23779c58b48952fc7a277df6b6,
+        type: 3}
+    - target: {fileID: 114404811147645094, guid: 38792308fbc548a47ab9ea6ed6cebb43,
+        type: 2}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114987671055050276, guid: 38792308fbc548a47ab9ea6ed6cebb43,
+        type: 2}
+      propertyPath: checkMarkPrefab
+      value: 
+      objectReference: {fileID: 1389259743721324, guid: c78de39a964160e41ab671c8178bd590,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38792308fbc548a47ab9ea6ed6cebb43, type: 2}
   m_IsPrefabAsset: 0
@@ -963,6 +1014,23 @@ Prefab:
       propertyPath: LevelName
       value: Tutorial
       objectReference: {fileID: 0}
+    - target: {fileID: 114404811147645094, guid: 38792308fbc548a47ab9ea6ed6cebb43,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 756e0c23779c58b48952fc7a277df6b6,
+        type: 3}
+    - target: {fileID: 114404811147645094, guid: 38792308fbc548a47ab9ea6ed6cebb43,
+        type: 2}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114987671055050276, guid: 38792308fbc548a47ab9ea6ed6cebb43,
+        type: 2}
+      propertyPath: checkMarkPrefab
+      value: 
+      objectReference: {fileID: 1389259743721324, guid: c78de39a964160e41ab671c8178bd590,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38792308fbc548a47ab9ea6ed6cebb43, type: 2}
   m_IsPrefabAsset: 0
@@ -1077,6 +1145,23 @@ Prefab:
       propertyPath: m_Text
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114404811147645094, guid: 38792308fbc548a47ab9ea6ed6cebb43,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 756e0c23779c58b48952fc7a277df6b6,
+        type: 3}
+    - target: {fileID: 114404811147645094, guid: 38792308fbc548a47ab9ea6ed6cebb43,
+        type: 2}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114987671055050276, guid: 38792308fbc548a47ab9ea6ed6cebb43,
+        type: 2}
+      propertyPath: checkMarkPrefab
+      value: 
+      objectReference: {fileID: 1389259743721324, guid: c78de39a964160e41ab671c8178bd590,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38792308fbc548a47ab9ea6ed6cebb43, type: 2}
   m_IsPrefabAsset: 0
@@ -1283,6 +1368,23 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.9999891
       objectReference: {fileID: 0}
+    - target: {fileID: 114404811147645094, guid: 38792308fbc548a47ab9ea6ed6cebb43,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 756e0c23779c58b48952fc7a277df6b6,
+        type: 3}
+    - target: {fileID: 114404811147645094, guid: 38792308fbc548a47ab9ea6ed6cebb43,
+        type: 2}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114987671055050276, guid: 38792308fbc548a47ab9ea6ed6cebb43,
+        type: 2}
+      propertyPath: checkMarkPrefab
+      value: 
+      objectReference: {fileID: 1389259743721324, guid: c78de39a964160e41ab671c8178bd590,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38792308fbc548a47ab9ea6ed6cebb43, type: 2}
   m_IsPrefabAsset: 0
@@ -1393,7 +1495,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 52}
-  m_SizeDelta: {x: 253.5, y: 62.399994}
+  m_SizeDelta: {x: 250, y: 83}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1312788668
 MonoBehaviour:
@@ -1466,8 +1568,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: e1b1f065b968882439664a5146c6dc30, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1618,6 +1720,23 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.99998903
       objectReference: {fileID: 0}
+    - target: {fileID: 114404811147645094, guid: 38792308fbc548a47ab9ea6ed6cebb43,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 756e0c23779c58b48952fc7a277df6b6,
+        type: 3}
+    - target: {fileID: 114404811147645094, guid: 38792308fbc548a47ab9ea6ed6cebb43,
+        type: 2}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114987671055050276, guid: 38792308fbc548a47ab9ea6ed6cebb43,
+        type: 2}
+      propertyPath: checkMarkPrefab
+      value: 
+      objectReference: {fileID: 1389259743721324, guid: c78de39a964160e41ab671c8178bd590,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38792308fbc548a47ab9ea6ed6cebb43, type: 2}
   m_IsPrefabAsset: 0
@@ -1646,14 +1765,14 @@ RectTransform:
   m_GameObject: {fileID: 1471125019}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 1312788667}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -1.5999985}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1471125021
@@ -1676,17 +1795,17 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 24
+    m_Font: {fileID: 12800000, guid: 9272bfd840e6f0049bd1fcd6a9f262e4, type: 3}
+    m_FontSize: 200
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
-    m_MaxSize: 40
+    m_MaxSize: 200
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Exit Game
 --- !u!222 &1471125022
@@ -1870,6 +1989,23 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.9999891
       objectReference: {fileID: 0}
+    - target: {fileID: 114404811147645094, guid: 38792308fbc548a47ab9ea6ed6cebb43,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 756e0c23779c58b48952fc7a277df6b6,
+        type: 3}
+    - target: {fileID: 114404811147645094, guid: 38792308fbc548a47ab9ea6ed6cebb43,
+        type: 2}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114987671055050276, guid: 38792308fbc548a47ab9ea6ed6cebb43,
+        type: 2}
+      propertyPath: checkMarkPrefab
+      value: 
+      objectReference: {fileID: 1389259743721324, guid: c78de39a964160e41ab671c8178bd590,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38792308fbc548a47ab9ea6ed6cebb43, type: 2}
   m_IsPrefabAsset: 0
@@ -2066,6 +2202,23 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.9999891
       objectReference: {fileID: 0}
+    - target: {fileID: 114404811147645094, guid: 38792308fbc548a47ab9ea6ed6cebb43,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 756e0c23779c58b48952fc7a277df6b6,
+        type: 3}
+    - target: {fileID: 114404811147645094, guid: 38792308fbc548a47ab9ea6ed6cebb43,
+        type: 2}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114987671055050276, guid: 38792308fbc548a47ab9ea6ed6cebb43,
+        type: 2}
+      propertyPath: checkMarkPrefab
+      value: 
+      objectReference: {fileID: 1389259743721324, guid: c78de39a964160e41ab671c8178bd590,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38792308fbc548a47ab9ea6ed6cebb43, type: 2}
   m_IsPrefabAsset: 0
