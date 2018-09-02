@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinalLevels/Tutorial.unity
     guid: e23a6062bd3d7cb4c9f01c3db7f049b3
+  - enabled: 1
+    path: Assets/Scenes/FinalLevels/CloseShave.unity
+    guid: c018647335fe93749b2b07b529335199
   m_configObjects: {}
